@@ -1,0 +1,49 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+// Datos para los proyectos
+const projects = [
+  {
+    title: 'Proyecto 1',
+    image: '/src/components/img/descarga.jpg' // Reemplaza con la ruta de la imagen
+  },
+  {
+    title: 'Proyecto 2',
+    image: '/src/components/img/descarga.jpg' // Reemplaza con la ruta de la imagen
+  },
+  {
+    title: 'Proyecto 3',
+    image: '/src/components/img/descarga.jpg' // Reemplaza con la ruta de la imagen
+  },
+];
+---
+
+<section class="projects-section">
+  <h2 class="section-title">Algunos de mis proyectos</h2>
+  <div class="projects-grid">
+    {projects.map(project => (
+      <ProjectCard {...project} />
+    ))}
+  </div>
+</section>
+
+<style>
+  .projects-section {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    color: #A855F7; /* morado */
+    margin-bottom: 2rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+</style>

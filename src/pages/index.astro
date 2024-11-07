@@ -1,9 +1,11 @@
 ---
+
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import SkillsSection from '../components/SkillCard/SkillSections.astro';
+import ProjectsSection from '../components/SkillSection/ProjectsSection.astro'; 
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portafolio Armando Torres">
 	<main>
 		<section class="w-full mx-auto lg:w-[898px] py-44 text-center">
 			<h2 class="text-white text-5xl font-bold flex justify-center items-center gap-2">
@@ -20,29 +22,26 @@ import Card from '../components/Card.astro';
 		
 		<section class="flex justify-center mt-20">
 			<div class="flex rounded-2xl w-[967px] h-[460px] bg-[#1F1F21] shadow-xl p-6">
-				<!-- Imagen ajustada al tamaño especificado -->
 				<figure class="w-[326.33px] h-[405.16px] flex-shrink-0">
-					<img src="/." alt="Card Preview" class="rounded-xl object-cover w-full h-full">
+					<img src="/src/components/img/Armando.jpg" alt="Armando" class="rounded-xl object-cover w-full h-full">
 				</figure>
-				
-				<!-- Contenido de texto y botón a la derecha de la imagen -->
 				<div class="flex flex-col justify-between p-8 w-full">
 					<div>
 						<h2 class="text-3xl font-bold text-[#7A2F98] pb-6">Acerca de mi</h2>
-						<p class="text-lg text-[#ffffff]">
+						<p class="text-lg text-white">
 							¡Hola! Soy Armando Torres, estudiante de Tecnología en Programación de Software en el SENA, especializado en análisis y desarrollo de software. Me apasiona la tecnología y el trabajo colaborativo, donde combino mis habilidades técnicas con mi creatividad para crear soluciones que no solo funcionan, sino que conectan emocionalmente con los usuarios.
 						</p>
-						<p class="text-lg text-[#ffffff] mt-4">
+						<p class="text-lg text-white mt-4">
 							Mi enfoque está en seguir aprendiendo y contribuir a proyectos que desafíen mi creatividad y habilidades técnicas, siempre con el propósito de mejorar y ofrecer soluciones que generen impacto.
 						</p>
 					</div>
-					<!-- Botón ajustado con borde oscuro -->
 					<div class="flex justify-start pt-6">
-						<button class=" bg-transparent border-2 border-[#7e22ce] font-bold rounded-lg text-lg  w-56 h-8  text-[#ffffff] justify-center">Mas Acerca De Mi</button>
+						<button class="bg-transparent border-2 border-[#7e22ce] font-bold rounded-lg text-lg w-56 h-8 text-white justify-center">Mas Acerca De Mi</button>
 					</div>
 				</div>
 			</div>
 		</section>
-		
+		<SkillsSection />
+		<ProjectsSection />
 	</main>
 </Layout>

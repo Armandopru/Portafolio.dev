@@ -1,0 +1,64 @@
+---
+import SkillCard from './SkillCard.astro';
+
+// Datos para las habilidades
+const skills = [
+  {
+    title: 'Sistema de diseño',
+    description: 'Tengo manejo de sistemas de diseño, lo cual permite agilidad en el proceso de diseño acortando los tiempos en la creación de las interfaces dentro del proyecto.',
+    icon: '/src/components/Icons/user.svg' 
+  },
+  {
+    title: 'Cooworking',
+    description: 'Trato de ser un activo valioso en el equipo que esté trabajando, aportando mis conocimientos y material que optimice el flujo de trabajo en el desarrollo del proyecto.',
+    icon: './icons/user.svg'
+  },
+
+
+];
+---
+
+<section class="skills-section">
+  <h2>Mis habilidades</h2>
+  <div class="skills-grid">
+    {skills.map(skill => (
+      <SkillCard {...skill} />
+    ))}
+  </div>
+  <a href="/skills" class="view-more-button">Ver más de mis skills</a>
+</section>
+
+<style>
+  .skills-section {
+    text-align: center;
+    color: #A855F7; /* color morado para el encabezado */
+    padding: 4rem 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .view-more-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background-color: #A855F7; /* morado */
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .view-more-button:hover {
+    background-color: #8b2fc7; /* morado más oscuro al pasar el cursor */
+  }
+</style>

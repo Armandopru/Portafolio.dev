@@ -1,0 +1,39 @@
+---
+
+import Layout from '../../layouts/Layout.astro';
+import SkillsSectionMe from '../../components/SkillCard/SkillSectionsMe.astro';
+import SoftwareManage from '../../components/SoftwareManage/SoftwareSection.astro';
+import Experience from '../../components/Experience/ExperienceSection.astro';
+import Tools from '../../components/Tools/ToolsSection.astro';
+---
+
+<Layout title="Portafolio Armando Torres">
+	<main>
+		<section class="flex justify-center mt-20">
+			<div class="flex rounded-2xl w-[967px] h-[460px] ">
+				<figure class="w-[326.33px] h-[405.16px] flex-shrink-0">
+					<img src="/src/components/img/Armando.jpg" alt="Armando" class="rounded-xl object-cover w-full h-full">
+				</figure>
+				<div class="flex flex-col justify-between p-8 w-full">
+					<div>
+						<h2 class="text-3xl font-bold text-[#7A2F98] pb-6">Armando Torres</h2>
+						<p class="text-lg text-white">
+							Soy Programador, actualmente vivo en Bogotá, Colombia.
+						<p class="text-lg text-white">
+							Me agrada la idea de trabajar en equipo, pienso que es una manera de conectar con nuevas habilidades y de brindar mi conocimiento al equipo con el fin de mejorar la productividad en el desarrollo de algun producto digital. Me gusta descubrir cosas nuevas a diario y ser un activo valioso en cualquier equipo en el que me desarrolle, por lo que estoy aprendiendo constantemente e investigando acerca de las nuevas tendencias.						</p>
+						<p class="text-lg text-white mt-4">
+							Trato de buscar todo el Feedback posible en los proyectos, con el fin de mejorar y poder hacer diseños que no solo sean atractivos esteticamente sino que sean accesibles y funcionales por lo que me gusta trabajar muy de la mano con los stakeholders.
+							Hablemos!
+						<h2 class="text-3xl font-bold text-[#7A2F98] pb-6">armando.torrez.molina@gmail.com</h2>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<SkillsSectionMe/>
+		<SoftwareManage/>
+		<Experience/>
+		<Tools/>
+	</main>
+</Layout>
